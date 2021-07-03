@@ -13,8 +13,8 @@ const OrderRoutes: React.FC<Props> = () => {
       <Route path='/orders/my-orders/:id'>
         <OrderDetail />
       </Route>
-      <Route path='/products'>
-       <Orders />
+      <Route path='/orders/my-orders'>
+        <Orders />
       </Route>
       <Route path='*'>
         <PageNotFound />

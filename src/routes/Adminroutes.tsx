@@ -1,25 +1,27 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import PageNotFound from './../pages/PageNotFound';
-import ManageProducts from './../pages/ManageProducts';
-import ManageOrderDetail from './../pages/ManageOrderDetail';
+import PageNotFound from '../pages/PageNotFound';
+import ManageProducts from '../pages/ManageProducts';
+import ManageOrderDetail from '../pages/ManageOrderDetail';
+import ManageOrders from '../pages/ManageOrders';
+import ManageUsers from '../pages/ManageUsers';
 
 interface Props {}
 
-const OrderRoutes: React.FC<Props> = () => {
+const AdminRoutes: React.FC<Props> = () => {
   return (
     <Switch>
       <Route path='/admin/manage-products'>
         <ManageProducts />
       </Route>
-      <Route path='/products'>
+      <Route path='/admin/manage-orders/:id'>
         <ManageOrderDetail />
       </Route>
-      <Route path='/products'>
-        <ManageOrderDetail />
+      <Route path='/admin/manage-orders'>
+        <ManageOrders />
       </Route>
-      <Route path='/products'>
-        <ManageOrderDetail />
+      <Route path='/admin/manage-users'>
+        <ManageUsers />
       </Route>
       <Route path='*'>
         <PageNotFound />
@@ -28,4 +30,4 @@ const OrderRoutes: React.FC<Props> = () => {
   )
 }
 
-export default OrderRoutes
+export default AdminRoutes
