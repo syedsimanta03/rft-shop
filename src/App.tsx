@@ -3,6 +3,7 @@ import Routes from './routes/Routes'
 import './App.css'
 import './fontawesome'
 import Layout from './Layout';
+import Signup from './components/auth/Signup';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes />
       </Layout>
       </Router>
+      <Signup/>
     </div>
   )
 }
